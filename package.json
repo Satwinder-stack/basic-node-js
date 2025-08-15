@@ -1,5 +1,5 @@
 {
-  "name": "node-starter",
+  "name": "starter",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,5 +8,12 @@
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
     "multer": "^2.0.2"
-  }
+  },
+  "version": "1.0.0",
+  "description": "[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/Satwinder-stack/basic-node-js)",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
