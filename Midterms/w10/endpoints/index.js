@@ -68,7 +68,7 @@ app.post('/api/users/update', (req, res) => {
 // Delete user by id (GET for simplicity)
 app.get('/api/users/:id/delete', (req, res) => {
     const index = users.findIndex(u => u.id === parseInt(req.params.id));
-    if (index === -1) return res.status(404).send('User not found.');
+    if (index === -1) return res.status(404).send('Check the link format: it should be api/users/[id]/delete. Sample api/users/3/delete. Also make sure there is enough index to be deleted');
 
     const deletedUser = users.splice(index, 1);
     res.send(deletedUser[0]);
