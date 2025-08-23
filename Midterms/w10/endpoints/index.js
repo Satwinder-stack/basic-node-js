@@ -1,6 +1,6 @@
 // Name: Satwinder R. Jeerh
 // Section: WD-303
-// Date: August 16, 2025
+// Date: August 23, 2025
 
 const express = require('express');
 const app = express();
@@ -19,10 +19,19 @@ const users = [
     { id: 6, name: 'Alex', email: 'alex@msn.com', age: 21, salary: 33000 }
 ];
 
-// Root route
 app.get('/', (req, res) => {
-    res.send("User management app!");
-});
+    res.send(`
+      <h1>User management app!</h1>
+      <nav>
+        <ul>
+          <li><a href="/api/users">View All Users</a></li>
+          <li><a href="/api/users/add">Add New User</a></li>
+          <li><a href="/api/users/update">Update User</a></li>
+          <li><a href="/api/users/[idNum, type at the url]/delete">Delete User (Example: ID 1)</a></li>
+        </ul>
+      </nav>
+    `);
+  });
 
 // Get all users
 app.get('/api/users', (req, res) => {
