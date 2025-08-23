@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Update User</title>
+    <link rel="stylesheet" href="/pages/styles.css" />
+</head>
+<body>
+    <h1>Update User</h1>
+    <form action="/api/users/update" method="POST">
+        <label>User ID to update:</label>
+        <input type="number" name="id" placeholder="User ID" required min="1" />
+
+        <label>New Name:</label>
+        <input type="text" name="name" placeholder="Name" required />
+
+        <label>New Email:</label>
+        <input type="email" name="email" placeholder="Email" required />
+
+        <label>New Age:</label>
+        <input type="number" name="age" placeholder="Age" required min="0" />
+
+        <label>New Salary:</label>
+        <input type="number" name="salary" placeholder="Salary" required min="0" />
+
+        <button type="submit" class="update">Update User</button>
+    </form>
+    <a href="/api/users">Back to Users List</a>
+</body>
+</html>

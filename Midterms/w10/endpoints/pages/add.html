@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add User</title>
+    <link rel="stylesheet" href="/pages/styles.css" />
+</head>
+<body>
+    <h1>Add New User</h1>
+    <form action="/api/users" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Name" required />
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Email" required />
+
+        <label>Age:</label>
+        <input type="number" name="age" placeholder="Age" required min="0" />
+
+        <label>Salary:</label>
+        <input type="number" name="salary" placeholder="Salary" required min="0" />
+
+        <button type="submit" class="add">Add User</button>
+    </form>
+    <a href="/api/users">Back to Users List</a>
+</body>
+</html>
